@@ -472,6 +472,29 @@
                     },
                 },
             });
+            const stairAB_block4 = new GeoJSONLayer({
+                url: './GeoJSON/stairAB/stairAB_block4.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.70,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
             const map = new Map({
                 basemap: 'topo-vector',
                 ground: 'world-elevation',
@@ -496,6 +519,7 @@
                     stairAB_block1,
                     stairAB_block2,
                     stairAB_block3,
+                    stairAB_block4,
                 ],
             });
 
