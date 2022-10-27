@@ -1,0 +1,44 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[106.70690450168186, 10.768149197808375, 5],
+							[106.70688695448271, 10.76814161134026, 5],
+							[106.70688622480786, 10.768143229972324, 5],
+							[106.70690377200701, 10.76815081644044, 5]
+                        ]
+					]
+				]
+			},
+			"properties": {
+				"Building Height": 2,
+				"Built Area": 9310.83,
+				"Gross Floor Area": 37243.3,
+				"Name": "Stair CD Stair 9",
+				"Number of Storeys": 4,
+				"Ground to Sea Elevation": -99999,
+				"Eave to Sea Elevation": -99986,
+				"Land Use": "Residential",
+				"First Storey Height": 4,
+				"Other Storeys Height": 3,
+				"GIS_uuid": 1000048,
+				"Modelur_uid": 1000048
+			},
+			"id": 48
+		}
+		
+	],
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+		}
+	}
+}
