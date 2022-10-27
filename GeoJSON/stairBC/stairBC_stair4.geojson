@@ -1,0 +1,44 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[106.70698867252352, 10.768339424451645, 5],
+							[106.7069964744315, 10.768322117539574, 5],
+							[106.70699483332655, 10.76832140801378, 5],
+							[106.70698703141856, 10.76833871492585, 5]												   
+						]
+					]
+				]
+			},
+			"properties": {
+				"Building Height": 2,
+				"Built Area": 9310.83,
+				"Gross Floor Area": 37243.3,
+				"Name": "Stair BC Stair 4",
+				"Number of Storeys": 4,
+				"Ground to Sea Elevation": -99999,
+				"Eave to Sea Elevation": -99986,
+				"Land Use": "Residential",
+				"First Storey Height": 4,
+				"Other Storeys Height": 3,
+				"GIS_uuid": 1000048,
+				"Modelur_uid": 1000048
+			},
+			"id": 48
+		}
+		
+	],
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+		}
+	}
+}
