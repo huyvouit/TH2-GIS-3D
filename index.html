@@ -472,6 +472,460 @@
                     },
                 },
             });
+
+            const canhAB1 = new GeoJSONLayer({
+                url: './GeoJSON/vomAB/canhAB1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'simple-fill',
+                        symbolLayers: [
+                            {
+                                type: 'simple-fill',
+                                
+                            },
+                        ],
+                        color: '#C2C59C',
+                                  outline: {  // autocasts as new SimpleLineSymbol()
+                                    color: '#C2C59C',
+                                    width: "0px"
+                                  }
+                    },
+                },
+            });
+
+            const roofAB_under = new GeoJSONLayer({
+                url: './GeoJSON/roof_AB/roofAB_under.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#A17A5F',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const roofAB_above = new GeoJSONLayer({
+                url: './GeoJSON/roof_AB/roofAB_above.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#A17A5F',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const roofBC_under = new GeoJSONLayer({
+                url: './GeoJSON/roof_BC/roofBC_under.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#A17A5F',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const roofBC_above = new GeoJSONLayer({
+                url: './GeoJSON/roof_BC/roofBC_above.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#C4C6A0',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const roofCD_under = new GeoJSONLayer({
+                url: './GeoJSON/roof_CD/roofCD_under.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#A17A5F',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const roofCD_above = new GeoJSONLayer({
+                url: './GeoJSON/roof_CD/roofCD_above.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#A17A5F',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const roofDA_under = new GeoJSONLayer({
+                url: './GeoJSON/roof_DA/roofDA_under.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#A17A5F',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const roofDA_above = new GeoJSONLayer({
+                url: './GeoJSON/roof_DA/roofDA_above.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.1,
+                                material: {
+                                    color: '#C4C6A0',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_AB1 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_AB/edgeroof_AB1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_AB2 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_AB/edgeroof_AB2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_AB3 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_AB/edgeroof_AB3.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_AB4 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_AB/edgeroof_AB4.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_CD1 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_CD/edgeroof_CD1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_CD2 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_CD/edgeroof_CD2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_CD3 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_CD/edgeroof_CD3.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_CD4 = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_CD/edgeroof_CD4.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_topAB = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_top/edgeroof_topAB.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const edgeroof_topCD = new GeoJSONLayer({
+                url: './GeoJSON/edgeroof_top/edgeroof_topCD.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
             const map = new Map({
                 basemap: 'topo-vector',
                 ground: 'world-elevation',
@@ -482,6 +936,7 @@
                     subFloor,
                     bachground2,
                     floor2,
+                    roofAB_under,
                     bachground3,
                     floor3,
                     column__mainA,
@@ -496,6 +951,27 @@
                     stairAB_block1,
                     stairAB_block2,
                     stairAB_block3,
+
+                    canhAB1,
+
+                    roofAB_under,
+                    roofAB_above,
+                    roofBC_under,
+                    roofBC_above,
+                    roofCD_under,
+                    roofCD_above,
+                    roofDA_under,
+                    roofDA_above,
+                    edgeroof_AB1,
+                    edgeroof_AB2,
+                    edgeroof_AB3,
+                    edgeroof_AB4,
+                    edgeroof_CD1,
+                    edgeroof_CD2,
+                    edgeroof_CD3,
+                    edgeroof_CD4,
+                    edgeroof_topAB,
+                    edgeroof_topCD,
                 ],
             });
 
