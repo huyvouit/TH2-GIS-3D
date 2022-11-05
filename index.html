@@ -841,7 +841,7 @@
                     },
                 },
             });
-            
+
             const column_DB_sub1 = new GeoJSONLayer({
                 url: './GeoJSON/column_DB/column_DB_sub1.geojson',
                 renderer: {
@@ -1786,8 +1786,7 @@
                     column__mainD,
                     column__subMainD,
 
-                    stairAB_block1,
-                    stairAB_block2,
+
                     stairAB_block3,
 
                     column_AB_sub1,
@@ -1853,74 +1852,175 @@
                     column_BC_sub4_extra,
                     column_BC_sub5_extra,
                     column_BC_sub6_extra
-                    
+
                 ],
             });
 
 
             // 
-            var graphicsLayer = new GraphicsLayer();
-            map.add(graphicsLayer);
 
-            var point = {
-                type: "point", // autocasts as new Point()
-                x: 106.70653085555828,
-                y: 10.76824429381022,
-                z: 20
-            };
 
-            markerSymbol = {
-                type: "simple-marker", // autocasts as new SimpleMarkerSymbol()
-                color: [226, 119, 40],
+            var polygon_banister = [
+                { // banister AB
+                    type: "polygon",
+                    rings: [
+                        [106.70665471208889, 10.768307591512468, 20.57],
+                        [106.70692815757982, 10.768425810040545, 20.57],
+                        [106.70692815757982, 10.7684258100405, 21.57],
+                        [106.70665471208889, 10.7683075915124, 21.57],
+                        [106.70665471208889, 10.768307591512468, 20.57],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+
+                },
+                { // banister BC
+                    type: "polygon",
+                    rings: [
+                        [106.70692815757982, 10.768425810040545, 20.57],
+                        [106.70702428791111, 10.768212588487533, 20.57],
+                        [106.70702428791111, 10.7682125884875, 21.57],
+                        [106.70692815757982, 10.7684258100405, 21.57],
+                        [106.70692815757982, 10.768425810040545, 20.57],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+                },
+                { // banister CD
+                    type: "polygon",
+                    rings: [
+                        [106.70702428791111, 10.768212588487533, 20.57],
+                        [106.70675224242018, 10.768094389959455, 20.57],
+                        [106.70675224242018, 10.7680943899594, 21.57],
+                        [106.70702428791111, 10.7682125884875, 21.57],
+                        [106.70702428791111, 10.768212588487533, 20.57],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+                },
+                { // banister DA
+                    type: "polygon",
+                    rings: [
+                        [106.70675224242018, 10.768094389959455, 20.57],
+                        [106.70665471208889, 10.768307591512468, 20.57],
+                        [106.70665471208889, 10.7683075915124, 21.57],
+                        [106.70675224242018, 10.7680943899594, 21.57],
+                        [106.70675224242018, 10.768094389959455, 20.57],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+                },
+                { // banister AB tang 2
+                    type: "polygon",
+                    rings: [
+                        [106.70665471208889, 10.768307591512468, 13.39],
+                        [106.70692815757982, 10.768425810040545, 13.39],
+                        [106.70692815757982, 10.7684258100405, 14.39],
+                        [106.70665471208889, 10.7683075915124, 14.39],
+                        [106.70665471208889, 10.768307591512468, 13.39],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+
+                },
+                { // banister BC tang 2
+                    type: "polygon",
+                    rings: [
+                        [106.70692815757982, 10.768425810040545, 13.39],
+                        [106.70702428791111, 10.768212588487533, 13.39],
+                        [106.70702428791111, 10.7682125884875, 14.39],
+                        [106.70692815757982, 10.7684258100405, 14.39],
+                        [106.70692815757982, 10.768425810040545, 13.39],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+                },
+                { // banister CD tang 2
+                    type: "polygon",
+                    rings: [
+                        [106.70702428791111, 10.768212588487533, 13.39],
+                        [106.70675224242018, 10.768094389959455, 13.39],
+                        [106.70675224242018, 10.7680943899594, 14.39],
+                        [106.70702428791111, 10.7682125884875, 14.39],
+                        [106.70702428791111, 10.768212588487533, 13.39],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+                },
+                { // banister DA tang 2
+                    type: "polygon",
+                    rings: [
+                        [106.70675224242018, 10.768094389959455, 13.39],
+                        [106.70665471208889, 10.768307591512468, 13.39],
+                        [106.70665471208889, 10.7683075915124, 14.39],
+                        [106.70675224242018, 10.7680943899594, 14.39],
+                        [106.70675224242018, 10.768094389959455, 13.39],
+                    ],
+                    symbol: {
+                        type: "simple-fill",
+                        color: [227, 139, 79, 0.6],
+                        outline: {
+                            color: "transparent",
+                            width: 1
+                        }
+                    }
+                },
+            ];
+
+            var fillSymbol = {
+                type: "simple-fill", // autocasts as new SimpleFillSymbol()
+                color: [227, 139, 79, 0.8],
                 outline: {
                     // autocasts as new SimpleLineSymbol()
-                    color: [255, 255, 255],
-                    width: 2
+                    color: "transparent",
+                    width: 1
                 }
             };
-            var pointGraphic = new Graphic({
-                geometry: point,
-                symbol: markerSymbol
-            });
+            // filters
 
-            var polyline = {
-                type: "polyline", // autocasts as new Polyline()
-                paths: [
-                    [106.70624332271923, 10.768117814845745, 20],
-                    [106.70653085555828, 10.76824429381022, 20]
-                ]
-            };
-            var polyline1 = {
-                type: "polyline", // autocasts as new Polyline()
-                paths: [
-                    [106.70653085555828, 10.76824429381022, 20],
-                    [106.70636777728276, 10.768598434672434, 20]
-                ]
-            };
 
-            lineSymbol = {
-                type: "simple-line", // autocasts as SimpleLineSymbol()
-                color: [226, 119, 40],
-                width: 4
-            };
-            lineSymbol1 = {
-                type: "simple-line", // autocasts as SimpleLineSymbol()
-                color: [0, 0, 0],
-                width: 4
-            };
-
-            var polylineGraphic = new Graphic({
-                geometry: polyline,
-                symbol: lineSymbol
-            });
-            var polylineGraphic1 = new Graphic({
-                geometry: polyline1,
-                symbol: lineSymbol1
-            });
-
-            graphicsLayer.add(polylineGraphic); // trục 0x
-            graphicsLayer.add(polylineGraphic1); //trụ 0y
-            graphicsLayer.add(pointGraphic);
 
 
             const view = new SceneView({
@@ -1933,6 +2033,25 @@
                     fov: 120,
                 },
             });
+
+            var graphicsLayer = new GraphicsLayer();
+            map.add(graphicsLayer);
+
+            var createGraphic = function (data) {
+                return new Graphic({
+                    geometry: data,
+                    symbol: data.symbol,
+                    attributes: data,
+                    popupTemplate: data?.popupTemplate
+                });
+            };
+
+            polygon_banister.forEach(function (data) {
+                graphicsLayer.add(createGraphic(data));
+            });
+
+
+
 
             view.popup.defaultPopupTemplateEnabled = true;
         });
