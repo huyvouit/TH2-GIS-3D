@@ -51,7 +51,9 @@
             'esri/layers/GraphicsLayer',
             'esri/Graphic',
             'esri/request',
-        ], function (Map, SceneView, GeoJSONLayer, SceneLayer, GraphicsLayer, Graphic, esriRequest) {
+            "esri/geometry/Mesh",
+            "esri/geometry/Point",
+        ], function (Map, SceneView, GeoJSONLayer, SceneLayer, GraphicsLayer, Graphic, esriRequest,Mesh,Point) {
 
             const bachground1 = new GeoJSONLayer({
                 url: './GeoJSON/background1.geojson',
@@ -1935,6 +1937,39 @@
             });
 
             view.popup.defaultPopupTemplateEnabled = true;
+
+            const location = new Point({
+              x: 106.70653085555828,
+                y: 10.76824429381022,
+                z: 20
+            });
+
+
+            Mesh.createFromGLTF(location, "./ProjectName.gltf") //Thêm tượng demo
+              .then(function(geometry) {
+                // increase it a factor of 3
+                geometry.scale(100, {origin: location});
+                // rotate it by 90 degrees around the z axis
+                
+                 geometry.rotate(0, 0, 90);
+                // add it to a graphic
+                const graphic = new Graphic({
+                  geometry,
+                  symbol: {
+                    type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                    symbolLayers: [{
+                      type: "fill", // autocasts as new FillSymbol3DLayer()
+                      material: {
+                        color: "#blue"
+                      },
+                      size: 1000
+                    }]
+                  }
+                });
+
+                view.graphics.add(graphic);
+              })
+              .catch(console.error);
         });
     </script>
 </body>
