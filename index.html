@@ -4614,6 +4614,54 @@
                 },
             });
 
+            const column_decoration_AB_sub1 = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/AB_sub1/column_decoration_AB_sub1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const column_decoration_BC_sub1 = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/BC_sub1/column_decoration_BC_sub1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
             const map = new Map({
                 basemap: 'topo-vector',
                 ground: 'world-elevation',
@@ -4844,6 +4892,9 @@
                     aboveWallFloor1DA,
                     aboveWallFloor2DA,
                     aboveWallFloor3DA,
+
+                    column_decoration_AB_sub1,
+                    column_decoration_BC_sub1,
 
                 ],
             });
