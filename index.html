@@ -4614,6 +4614,191 @@
                 },
             });
 
+            const column_decoration_A = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/A/column_decoration_A.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const column_decoration_B = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/B/column_decoration_B.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const column_decoration_C = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/C/column_decoration_C.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const column_decoration_D = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/D/column_decoration_D.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const column_decoration_small_A = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/A/column_decoration_small_A.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const column_decoration_small_B = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/B/column_decoration_small_B.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const column_decoration_small_C = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/C/column_decoration_small_C.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const column_decoration_small_D = new GeoJSONLayer({
+                url: './GeoJSON/column_decoration/D/column_decoration_small_D.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.14,
+                                material: {
+                                    color: '#FFFFFF',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
             const column_decoration_AB_sub1 = new GeoJSONLayer({
                 url: './GeoJSON/column_decoration/AB_sub1/column_decoration_AB_sub1.geojson',
                 renderer: {
@@ -6144,6 +6329,15 @@
                     aboveWallFloor1DA,
                     aboveWallFloor2DA,
                     aboveWallFloor3DA,
+
+                    column_decoration_A,
+                    column_decoration_B,
+                    column_decoration_C,
+                    column_decoration_D,
+                    column_decoration_small_A,
+                    column_decoration_small_B,
+                    column_decoration_small_C,
+                    column_decoration_small_D,
 
                     column_decoration_AB_sub1,
                     column_decoration_AB_sub2,
