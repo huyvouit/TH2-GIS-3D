@@ -5430,7 +5430,7 @@
                         symbolLayers: [
                             {
                                 type: 'extrude',
-                                size: 13.41,
+                                size: 6.7,
                                 material: {
                                     color: '#C2C59C',
                                 },
@@ -5490,6 +5490,29 @@
                     },
                 },
             });
+            const centerHorizontalWallRoom3 = new GeoJSONLayer({
+                url: './GeoJSON/inside/centerHorizontalWallRoom3.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.7,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
             const floorAnniRoom = new GeoJSONLayer({
                 url: './GeoJSON/inside/floorAnniRoom.geojson',
                 renderer: {
@@ -5502,6 +5525,145 @@
                                 size: 0.3,
                                 material: {
                                     color: 'black',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const wall1Room4 = new GeoJSONLayer({
+                url: './GeoJSON/inside/wall1Room4.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.7,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const wall2Room4 = new GeoJSONLayer({
+                url: './GeoJSON/inside/wall2Room4.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.7,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const primaryWallHCMRoom = new GeoJSONLayer({
+                url: './GeoJSON/inside/primaryWallHCMRoom.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.7,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const wallJourneyRoom = new GeoJSONLayer({
+                url: './GeoJSON/inside/wallJourneyRoom.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.7,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const wallJourneyRoom2 = new GeoJSONLayer({
+                url: './GeoJSON/inside/wallJourneyRoom2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.7,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+            const wallTempleRoom = new GeoJSONLayer({
+                url: './GeoJSON/inside/wallTempleRoom.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.7,
+                                material: {
+                                    color: '#C2C59C',
                                 },
                                 edges: {
                                     type: 'solid', // autocasts as new SolidEdges3D()
@@ -5787,7 +5949,14 @@
                     centerHorizontalWall,
                     centerHorizontalWall2,
                     centerHorizontalWallMore,
-                    floorAnniRoom
+                    centerHorizontalWallRoom3,
+                    floorAnniRoom,
+                    wall1Room4,
+                    wall2Room4,
+                    primaryWallHCMRoom,
+                    wallJourneyRoom,
+                    wallJourneyRoom2,
+                    wallTempleRoom
                 ],
             });
 
@@ -5954,6 +6123,61 @@
                 }
             };
             // filters
+            // const point = { //Create a point
+            //     type: "point",
+            //     longitude: 106.7069470554851,
+            //     latitude: 10.768266605933787
+            // };
+            // const simpleMarkerSymbol = {
+            //     type: "simple-marker",
+            //     color: [226, 119, 40],  // Orange
+            //     outline: {
+            //         color: [255, 255, 255], // White
+            //         width: 1
+            //     }
+            // };
+            let points = [
+                {
+                    type: "point",
+                    x: 106.7069470554851,
+                    y: 10.768266605933787,
+                    z: 7.1,
+                    symbol: {
+                        type: "simple-marker",
+                        color: [226, 119, 40],  // Orange
+                        outline: {
+                            color: [255, 255, 255], // White
+                            width: 1
+                        }
+                    },
+                    Name: "tuong 2 nguoi -- Bác Hồ và miền nam",
+
+                    popupTemplate: {
+                        title: "{Name}",
+
+                    },
+                },
+                {
+                    type: "point",
+                    x: 106.70689727426254,
+                    y: 10.768297899128573,
+                    z: 7.1,
+                    symbol: {
+                        type: "simple-marker",
+                        color: [226, 119, 40],  // Orange
+                        outline: {
+                            color: [255, 255, 255], // White
+                            width: 1
+                        }
+                    },
+                    Name: "tượng gia đình -- Bác Hồ và miền nam",
+
+                    popupTemplate: {
+                        title: "{Name}",
+
+                    },
+                }
+            ]
 
 
 
@@ -5968,10 +6192,19 @@
                     fov: 120,
                 },
             });
-
+            var createGraphic = function (data) {
+                return new Graphic({
+                    geometry: data,
+                    symbol: data.symbol,
+                    attributes: data,
+                    popupTemplate: data.popupTemplate
+                });
+            };
             var graphicsLayer = new GraphicsLayer();
             map.add(graphicsLayer);
-
+            points.forEach(function (data) {
+                graphicsLayer.add(createGraphic(data));
+            });
             var createGraphic = function (data) {
                 return new Graphic({
                     geometry: data,
