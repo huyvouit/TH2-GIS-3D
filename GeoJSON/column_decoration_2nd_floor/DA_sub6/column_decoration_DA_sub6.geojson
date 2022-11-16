@@ -1,0 +1,42 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [106.70673021309602, 10.768131052369085, 18.81],
+                            [106.70673324405308, 10.76812432882051, 18.81],
+                            [106.70674561545968, 10.768129677553427, 18.81],
+                            [106.70674258450262, 10.768136401102002, 18.81]                           
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "Building Height": 2,
+                "Built Area": 9310.83,
+                "Gross Floor Area": 37243.3,
+                "Name": "Building",
+                "Number of Storeys": 4,
+                "Ground to Sea Elevation": -99999,
+                "Eave to Sea Elevation": -99986,
+                "Land Use": "Residential",
+                "First Storey Height": 4,
+                "Other Storeys Height": 3,
+                "GIS_uuid": 1000048,
+                "Modelur_uid": 1000048
+            },
+            "id": 48
+        }
+    ],
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    }
+}
