@@ -5054,10 +5054,10 @@
             });
 
 
-            Mesh.createFromGLTF(location, "./ProjectName.gltf") //Thêm tượng demo
+            Mesh.createFromGLTF(location, "./GeoJSON/tuong/bac_ho_voi_mien_nam.glb") //Thêm tượng demo
               .then(function(geometry) {
                 // increase it a factor of 3
-                geometry.scale(100, {origin: location});
+                geometry.scale(1, {origin: location});
                 // rotate it by 90 degrees around the z axis
                 
                  geometry.rotate(0, 0, 90);
@@ -5068,9 +5068,9 @@
                     type: "mesh-3d", // autocasts as new MeshSymbol3D()
                     symbolLayers: [{
                       type: "fill", // autocasts as new FillSymbol3DLayer()
-                      material: {
-                        color: "#blue"
-                      },
+                    //   material: {
+                    //     color: "blue"
+                    //   },
                       size: 1000
                     }]
                   }
@@ -5079,6 +5079,8 @@
                 view.graphics.add(graphic);
               })
               .catch(console.error);
+
+            
         });
     </script>
 </body>
