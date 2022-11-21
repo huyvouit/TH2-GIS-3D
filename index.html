@@ -11110,13 +11110,14 @@
 
             view.popup.defaultPopupTemplateEnabled = true;
 
+            // ========================BÁC HỒ VỚI MIỀN NAM=================================
             const bac_ho_voi_mien_nam_location = new Point({
                 x: 106.70653085555828,
                 y: 10.76824429381022,
                 z: 20
             });
 
-            Mesh.createFromGLTF(bac_ho_voi_mien_nam_location, "./GeoJSON/Model/bac_ho_voi_mien_nam/bac_ho_voi_mien_nam.glb") //Thêm tượng demo
+            Mesh.createFromGLTF(bac_ho_voi_mien_nam_location, "./Model/bac_ho_voi_mien_nam/bac_ho_voi_mien_nam.glb") //Thêm tượng demo
               .then(function(geometry) {
                 // increase it a factor of 3
                 geometry.scale(1, {origin: bac_ho_voi_mien_nam_location});
@@ -11141,15 +11142,17 @@
                 view.graphics.add(graphic);
               })
               .catch(console.error);
+            // ========================BÁC HỒ VỚI MIỀN NAM=================================
 
 
+            // ========================RỒNG TRÊN MÁI NHÀ=================================
             const dragon_location_1 = new Point({
                 x: 106.70677109359,
                 y: 10.768229806640536,
                 z: 28.5
             });
 
-            Mesh.createFromGLTF(dragon_location_1, "./GeoJSON/Model/rong_mai_nha/dragon.gltf") //Thêm tượng demo
+            Mesh.createFromGLTF(dragon_location_1, "./Model/rong_mai_nha/dragon.gltf") //Thêm tượng demo
               .then(function(geometry) {
                 // increase it a factor of 3
                 geometry.scale(0.025, {origin: dragon_location_1});
@@ -11181,7 +11184,7 @@
                 z: 28.5
             });
 
-            Mesh.createFromGLTF(dragon_location_2, "./GeoJSON/Model/rong_mai_nha/dragon.gltf") //Thêm tượng demo
+            Mesh.createFromGLTF(dragon_location_2, "./Model/rong_mai_nha/dragon.gltf") //Thêm tượng demo
               .then(function(geometry) {
                 // increase it a factor of 3
                 geometry.scale(0.025, {origin: dragon_location_2});
@@ -11206,6 +11209,104 @@
                 view.graphics.add(graphic);
               })
               .catch(console.error);
+            // ========================RỒNG TRÊN MÁI NHÀ=================================
+            
+
+            const tuongBacHoNgoiLocation = new Point({
+                x: 106.70689572342282,
+                y: 10.768303179718915, 
+                z: 7.1
+            });
+
+            Mesh.createFromGLTF(tuongBacHoNgoiLocation, "./Model/Phong_tuong_niem_HCM/BacHo_ngoi.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1.5, { origin: tuongBacHoNgoiLocation });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 20);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const binhHoaTraiLocation = new Point({
+                x: 106.70692604891157,
+                y: 10.76831554694806, 
+                z: 7.1
+            });
+
+            Mesh.createFromGLTF(binhHoaTraiLocation, "./Model/Phong_tuong_niem_HCM/binh_hoa.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(5, { origin: binhHoaTraiLocation });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 20);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const binhHoaPhaiLocation = new Point({
+                x: 106.70685964728027,
+                y: 10.768286838442819,
+                z: 7.1,
+            });
+
+            Mesh.createFromGLTF(binhHoaPhaiLocation, "./Model/Phong_tuong_niem_HCM/binh_hoa.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(5, { origin: binhHoaPhaiLocation });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 20);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
         });
     </script>
 </body>
