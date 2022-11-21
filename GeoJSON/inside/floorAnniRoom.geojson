@@ -1,0 +1,55 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+                            [106.70692933790794, 10.768318456706321, 6.69],
+                            [106.70684804009316, 10.768283307890018, 6.69],
+                            
+                            [106.70684411107476, 10.768292023601132, 6.69],
+
+                            [106.7068713786648, 10.76830381264511, 6.69],
+                            [106.70686295933963, 10.768322489168927, 6.69],
+                            [106.70689161555694, 10.768334878580884, 6.69],
+                            [106.70690003488211, 10.768316202057067, 6.69],
+
+                            [106.70692540888953, 10.768327172417436, 6.69]
+
+
+
+						]
+					]
+				]
+			},
+			"properties": {
+				"Building Height": 2,
+				"Built Area": 9310.83,
+				"Gross Floor Area": 37243.3,
+				"Name": "Inside Door 1",
+				"Number of Storeys": 4,
+				"Ground to Sea Elevation": -99999,
+				"Eave to Sea Elevation": -99986,
+				"Land Use": "Residential",
+				"First Storey Height": 4,
+				"Other Storeys Height": 3,
+				"GIS_uuid": 1000048,
+				"Modelur_uid": 1000048
+			},
+			"id": 554
+		}
+		
+		
+	],
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+		}
+	}
+}
