@@ -11238,6 +11238,57 @@
                     view.graphics.add(graphic);
                 })
                 .catch(console.error);
+            
+            const tuPhongTrungBay1Location = new Point({
+                x: 106.70674180281016,
+                y: 10.7682392363005,
+                z: 13.41,
+            })
+
+            Mesh.createFromGLTF(tuPhongTrungBay1Location, "./Model/Phong_trung_bay_chu_de_1/guong_nuoc.gltf")
+                .then(function (geometry) {
+                    geometry.scale(0.03, {origin: tuPhongTrungBay1Location})
+                    geometry.rotate(0, 0, 203);
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d",
+                            symbolLayers: [{
+                                type: "fill",
+                                size: 1000
+                            }]
+                        }
+                    });
+                    view.graphics.add(graphic)
+                })
+                .catch(console.error);
+            
+            const tuongBacHoTang4Location = new Point({
+                x: 106.70695841468554,
+                y: 10.768240571373488,
+                z: 13.41,
+            })
+
+            Mesh.createFromGLTF(tuongBacHoTang4Location, "./Model/Phong_trung_bay_chu_de_4/BacHo.gltf")
+                .then(function (geometry) {
+                    geometry.scale(0.01, {origin: tuongBacHoTang4Location})
+                    geometry.rotate(0, 0, 248);
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d",
+                            symbolLayers: [{
+                                type: "fill",
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+                    view.graphics.add(graphic)
+                })
+                .catch(console.error);
         });
     </script>
 </body>
