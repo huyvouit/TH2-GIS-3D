@@ -11175,6 +11175,70 @@
                 })
                 .catch(console.error);
 
+            const tuongMeVaCacConLocation = new Point({
+            x: 106.70689572342282,
+            y: 10.768303179718915, 
+            z: 14.1
+            });
+
+            Mesh.createFromGLTF(tuongMeVaCacConLocation, "./Model/me_anh_hung_cac_con/me_anh_hung.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.1, { origin: tuongMeVaCacConLocation });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 20);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    // color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const tuongKhangChienLocation = new Point({
+                x: 106.70689572342282,
+                y: 10.768303179718915, 
+                z: 16.1
+            });
+
+            Mesh.createFromGLTF(tuongKhangChienLocation, "./Model/me_anh_hung_cac_con/tuong_khang_chien.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.1, { origin: tuongKhangChienLocation });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 20);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    // color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
             const binhHoaTraiLocation = new Point({
                 x: 106.70692604891157,
                 y: 10.76831554694806, 
