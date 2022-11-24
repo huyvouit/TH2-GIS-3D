@@ -13057,6 +13057,37 @@
                     view.graphics.add(graphic)
                 })
                 .catch(console.error);
+            const banthoLocation = new Point({
+                    x: 106.70678692151299,
+                    y: 10.76819737258987,
+                    z: 13.41,
+            });
+
+            Mesh.createFromGLTF(banthoLocation, "./Model/Den_tho_tang_2/bt.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: banthoLocation });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 290);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#gold"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
         });
     </script>
 </body>
