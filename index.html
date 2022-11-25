@@ -11769,11 +11769,62 @@
                 },
             });
 
+            const Buc = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_1/Buc.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 1,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const BucTren = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_1/BucTren.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 0.2,
+                                material: {
+                                    color: '#B87333',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
             const map = new Map({
                 basemap: 'topo-vector',
                 ground: 'world-elevation',
                 layers: [
                     //
+                    Buc,
+                    BucTren,
+
                     bachground1,
                     floor,
                     subFloor,
@@ -13126,7 +13177,43 @@
                     view.graphics.add(graphic)
                 })
                 .catch(console.error);
+
+                const tuongBacHoDocBao = new Point({
+                    x: 106.70682226415428,
+                    y: 10.768194427639017,
+                    z: 14.61,
+            });
+
+            Mesh.createFromGLTF(tuongBacHoDocBao, "./Model/Phong_trung_bay_chu_de_1/TuongBacHo.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.005, { origin: tuongBacHoDocBao });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 150);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
         });
+
+        
+
+            
     </script>
 </body>
 
