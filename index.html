@@ -12878,38 +12878,107 @@
 
             view.popup.defaultPopupTemplateEnabled = true;
 
-            const location = new Point({
-                x: 106.70688744697146,
-                y: 10.768304808629107,
-                z: 7.1,
+            // ========================BÁC HỒ VỚI MIỀN NAM=================================
+            const bac_ho_voi_mien_nam_location = new Point({
+                x: 106.70653085555828,
+                y: 10.76824429381022,
+                z: 20
             });
 
+            Mesh.createFromGLTF(bac_ho_voi_mien_nam_location, "./Model/bac_ho_voi_mien_nam/bac_ho_voi_mien_nam.glb") //Thêm tượng demo
+              .then(function(geometry) {
+                // increase it a factor of 3
+                geometry.scale(1, {origin: bac_ho_voi_mien_nam_location});
+                // rotate it by 90 degrees around the z axis
+                
+                 geometry.rotate(0, 0, 90);
+                // add it to a graphic
+                const graphic = new Graphic({
+                  geometry,
+                  symbol: {
+                    type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                    symbolLayers: [{
+                      type: "fill", // autocasts as new FillSymbol3DLayer()
+                    //   material: {
+                    //     color: "blue"
+                    //   },
+                      size: 1000
+                    }]
+                  }
+                });
 
-            Mesh.createFromGLTF(location, "./ProjectName.gltf") //Thêm tượng demo
-                .then(function (geometry) {
-                    // increase it a factor of 3
-                    geometry.scale(100, { origin: location });
-                    // rotate it by 90 degrees around the z axis
+                view.graphics.add(graphic);
+              })
+              .catch(console.error);
+            // ========================BÁC HỒ VỚI MIỀN NAM=================================
 
-                    geometry.rotate(0, 0, 90);
-                    // add it to a graphic
-                    const graphic = new Graphic({
-                        geometry,
-                        symbol: {
-                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
-                            symbolLayers: [{
-                                type: "fill", // autocasts as new FillSymbol3DLayer()
-                                material: {
-                                    color: "#blue"
-                                },
-                                size: 1000
-                            }]
-                        }
-                    });
 
-                    view.graphics.add(graphic);
-                })
-                .catch(console.error);
+            // ========================RỒNG TRÊN MÁI NHÀ=================================
+            const dragon_location_1 = new Point({
+                x: 106.70677109359,
+                y: 10.768229806640536,
+                z: 28.5
+            });
+
+            Mesh.createFromGLTF(dragon_location_1, "./Model/rong_mai_nha/dragon.gltf") //Thêm tượng demo
+              .then(function(geometry) {
+                // increase it a factor of 3
+                geometry.scale(0.025, {origin: dragon_location_1});
+                // rotate it by 90 degrees around the z axis
+                
+                 geometry.rotate(0, 0, 294);
+                // add it to a graphic
+                const graphic = new Graphic({
+                  geometry,
+                  symbol: {
+                    type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                    symbolLayers: [{
+                      type: "fill", // autocasts as new FillSymbol3DLayer()
+                      material: {
+                        color: "gray"
+                      },
+                      size: 1000
+                    }]
+                  }
+                });
+
+                view.graphics.add(graphic);
+              })
+              .catch(console.error);
+
+            const dragon_location_2 = new Point({
+                x: 106.70690680034602,
+                y: 10.768288478965882,
+                z: 28.5
+            });
+
+            Mesh.createFromGLTF(dragon_location_2, "./Model/rong_mai_nha/dragon.gltf") //Thêm tượng demo
+              .then(function(geometry) {
+                // increase it a factor of 3
+                geometry.scale(0.025, {origin: dragon_location_2});
+                // rotate it by 90 degrees around the z axis
+                
+                 geometry.rotate(0, 0, 114);
+                // add it to a graphic
+                const graphic = new Graphic({
+                  geometry,
+                  symbol: {
+                    type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                    symbolLayers: [{
+                      type: "fill", // autocasts as new FillSymbol3DLayer()
+                      material: {
+                        color: "gray"
+                      },
+                      size: 1000
+                    }]
+                  }
+                });
+
+                view.graphics.add(graphic);
+              })
+              .catch(console.error);
+            // ========================RỒNG TRÊN MÁI NHÀ=================================
+            
 
             const tuongBacHoNgoiLocation = new Point({
                 x: 106.70689572342282,
