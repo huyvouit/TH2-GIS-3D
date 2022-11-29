@@ -13063,42 +13063,10 @@
                 })
                 .catch(console.error);
 
-            const tuongMeVaCacConLocation = new Point({
-            x: 106.70689572342282,
-            y: 10.768303179718915, 
-            z: 14.1
-            });
-
-            Mesh.createFromGLTF(tuongMeVaCacConLocation, "./Model/me_anh_hung_cac_con/me_anh_hung.gltf")
-                .then(function (geometry) {
-                    // increase it a factor of 3
-                    geometry.scale(0.1, { origin: tuongMeVaCacConLocation });
-                    // rotate it by 90 degrees around the z axis
-
-                    geometry.rotate(0, 0, 20);
-                    // add it to a graphic
-                    const graphic = new Graphic({
-                        geometry,
-                        symbol: {
-                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
-                            symbolLayers: [{
-                                type: "fill", // autocasts as new FillSymbol3DLayer()
-                                material: {
-                                    // color: "#blue"
-                                },
-                                size: 1000
-                            }]
-                        }
-                    });
-
-                    view.graphics.add(graphic);
-                })
-                .catch(console.error);
-
             const tuongKhangChienLocation = new Point({
-                x: 106.70689572342282,
-                y: 10.768303179718915, 
-                z: 16.1
+                x: 106.70688365980618,
+                y: 10.768303171261888,
+                z: 13.41,
             });
 
             Mesh.createFromGLTF(tuongKhangChienLocation, "./Model/me_anh_hung_cac_con/tuong_khang_chien.gltf")
@@ -13242,26 +13210,22 @@
                 })
                 .catch(console.error);
 
-                const tuongBacHoDocBao = new Point({
-                    x: 106.70682226415428,
-                    y: 10.768194427639017,
-                    z: 14.61,
-            });
+            const meAnhHungVaCacCon = new Point({
+                x: 106.70689727426254,
+                y: 10.768297899128573,
+                z: 7.1,
+            })
 
-            Mesh.createFromGLTF(tuongBacHoDocBao, "./Model/Phong_trung_bay_chu_de_1/TuongBacHo.gltf")
+            Mesh.createFromGLTF(meAnhHungVaCacCon, "./Model/me_anh_hung_cac_con/me_anh_hung.gltf")
                 .then(function (geometry) {
-                    // increase it a factor of 3
-                    geometry.scale(0.005, { origin: tuongBacHoDocBao });
-                    // rotate it by 90 degrees around the z axis
-
-                    geometry.rotate(0, 0, 150);
-                    // add it to a graphic
+                    geometry.scale(0.01, {origin: meAnhHungVaCacCon})
+                    geometry.rotate(0, 0, 248);
                     const graphic = new Graphic({
                         geometry,
                         symbol: {
-                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            type: "mesh-3d",
                             symbolLayers: [{
-                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                type: "fill",
                                 material: {
                                     color: "#blue"
                                 },
@@ -13269,74 +13233,11 @@
                             }]
                         }
                     });
-
-                    view.graphics.add(graphic);
+                    view.graphics.add(graphic)
                 })
                 .catch(console.error);
-            const banthoLocation = new Point({
-                    x: 106.70678692151299,
-                    y: 10.76819737258987,
-                    z: 13.41,
-            });
 
-            Mesh.createFromGLTF(banthoLocation, "./Model/Den_tho_tang_2/bt.gltf")
-                .then(function (geometry) {
-                    // increase it a factor of 3
-                    geometry.scale(1, { origin: banthoLocation });
-                    // rotate it by 90 degrees around the z axis
-
-                    geometry.rotate(0, 0, 290);
-                    // add it to a graphic
-                    const graphic = new Graphic({
-                        geometry,
-                        symbol: {
-                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
-                            symbolLayers: [{
-                                type: "fill", // autocasts as new FillSymbol3DLayer()
-                                material: {
-                                    color: "#gold"
-                                },
-                                size: 1000
-                            }]
-                        }
-                    });
-
-                    view.graphics.add(graphic);
-                })
-                .catch(console.error);    
-
-            const tuongbacphong3tang2Location = new Point({
-                    x: 106.7068303096857,
-                    
-                    y: 10.768336273462926,
-                    z: 13.41,
-            });
-
-            Mesh.createFromGLTF(tuongbacphong3tang2Location, "./Model/tuong_bac_phong_3_tang_2/555309.gltf")
-                .then(function (geometry) {
-                    // increase it a factor of 3
-                    geometry.scale(1, { origin: tuongbacphong3tang2Location });
-                    // rotate it by 90 degrees around the z axis
-
-                    geometry.rotate(0, 0, 90);
-                    // add it to a graphic
-                    const graphic = new Graphic({
-                        geometry,
-                        symbol: {
-                        type: "mesh-3d", // autocasts as new MeshSymbol3D()
-                        symbolLayers: [{
-                          type: "fill", // autocasts as new FillSymbol3DLayer()
-                          material: {
-                            color: "gold"
-                          },
-                          size: 1000
-                        }]
-                      }
-                    });
-
-                    view.graphics.add(graphic);
-                })
-                .catch(console.error);        
+            
         });
 
         
