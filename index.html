@@ -4273,6 +4273,102 @@
                     },
                 },
             });
+            
+            const wallAB1_Door1_Floor2 = new GeoJSONLayer({
+                url: '/GeoJSON/wallAB/wallAB1_Door1_Floor2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 3.72,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const wallAB1_Door3_Floor2 = new GeoJSONLayer({
+                url: '/GeoJSON/wallAB/wallAB1_Door3_Floor2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 3.72,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const wallAB1_Door5_Floor2 = new GeoJSONLayer({
+                url: '/GeoJSON/wallAB/wallAB1_Door5_Floor2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 3.72,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const wallAB1_Door7_Floor2 = new GeoJSONLayer({
+                url: '/GeoJSON/wallAB/wallAB1_Door7_Floor2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 3.72,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
 
             const wallAB1 = new GeoJSONLayer({
                 url: '/GeoJSON/wallAB/wallAB1.geojson',
@@ -12094,6 +12190,11 @@
 
                     wallDA1_Floor2,
                     wallDA2_Floor2,
+                    
+                    wallAB1_Door1_Floor2,
+                    wallAB1_Door3_Floor2,
+                    wallAB1_Door5_Floor2,
+                    wallAB1_Door7_Floor2,
 
 
                     doorAB_1_Left,
@@ -12111,20 +12212,20 @@
                     doorAB_7_Left,
                     doorAB_7_Right,
 
-                    doorAB_1_Left_Floor2,
-                    doorAB_1_Right_Floor2,
+                    //doorAB_1_Left_Floor2,
+                    //doorAB_1_Right_Floor2,
                     doorAB_2_Left_Floor2,
                     doorAB_2_Right_Floor2,
-                    doorAB_3_Left_Floor2,
-                    doorAB_3_Right_Floor2,
+                    //doorAB_3_Left_Floor2,
+                    //doorAB_3_Right_Floor2,
                     doorAB_4_Left_Floor2,
                     doorAB_4_Right_Floor2,
-                    doorAB_5_Left_Floor2,
-                    doorAB_5_Right_Floor2,
+                    //doorAB_5_Left_Floor2,
+                    //doorAB_5_Right_Floor2,
                     doorAB_6_Left_Floor2,
                     doorAB_6_Right_Floor2,
-                    doorAB_7_Left_Floor2,
-                    doorAB_7_Right_Floor2,
+                    //doorAB_7_Left_Floor2,
+                    //doorAB_7_Right_Floor2,
 
                     doorAB_4_Left_Floor3,
                     doorAB_4_Right_Floor3,
@@ -12584,8 +12685,8 @@
             let points = [
                 {
                     type: "point",
-                    x: 106.7069470554851,
-                    y: 10.768266605933787,
+                    x: 106.70694916286813,
+                    y: 10.768245200464605,
                     z: 7.1,
                     symbol: {
                         type: "simple-marker",
@@ -12931,18 +13032,18 @@
 
             // ========================BÁC HỒ VỚI MIỀN NAM=================================
             const bac_ho_voi_mien_nam_location = new Point({
-                x: 106.70653085555828,
-                y: 10.76824429381022,
-                z: 20
+                x: 106.70694916286813,
+                y: 10.768245200464605,
+                z: 7.1,
             });
 
             Mesh.createFromGLTF(bac_ho_voi_mien_nam_location, "./Model/bac_ho_voi_mien_nam/bac_ho_voi_mien_nam.glb") //Thêm tượng demo
               .then(function(geometry) {
                 // increase it a factor of 3
-                geometry.scale(1, {origin: bac_ho_voi_mien_nam_location});
+                geometry.scale(0.35, {origin: bac_ho_voi_mien_nam_location});
                 // rotate it by 90 degrees around the z axis
                 
-                 geometry.rotate(0, 0, 90);
+                 geometry.rotate(0, 0, 297);
                 // add it to a graphic
                 const graphic = new Graphic({
                   geometry,
@@ -13247,3 +13348,5 @@
 </body>
 
 </html>
+
+<!-- note 106.72176976360313 -->
