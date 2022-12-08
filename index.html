@@ -13338,9 +13338,71 @@
                 })
                 .catch(console.error);
 
-            
-        });
+            const banthoLocation = new Point({
+                    x: 106.70678692151299,
+                    y: 10.76819737258987,
+                    z: 13.41,
+            });
 
+            Mesh.createFromGLTF(banthoLocation, "./Model/Den_tho_tang_2/bt.gltf")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: banthoLocation });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 290);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#gold"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);    
+
+            const tuongbacphong3tang2Location = new Point({
+                   x: 106.70683488494919,
+                    y: 10.768338358215452,
+                    z: 13.41,
+            });
+
+            Mesh.createFromGLTF(tuongbacphong3tang2Location, "./Model/tuong_bac_phong_3_tang_2/555309.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: tuongbacphong3tang2Location });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 90);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                        type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                        symbolLayers: [{
+                          type: "fill", // autocasts as new FillSymbol3DLayer()
+                          material: {
+                            color: "gold"
+                          },
+                          size: 1000
+                        }]
+                      }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+        });
+            
         
 
             
