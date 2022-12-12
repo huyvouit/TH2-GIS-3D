@@ -13372,7 +13372,7 @@
 
             const tuongbacphong3tang2Location = new Point({
                 x: 106.70683488494919,
-                y: 10.768338358215452,
+                y: 10.768333358215452,
                 z: 13.41,
             });
 
@@ -13401,6 +13401,130 @@
                     view.graphics.add(graphic);
                 })
                 .catch(console.error);
+            const xekeo = new Point({
+                x: 106.70694029000096,
+                y:10.768295012767528,
+                z: 7.1,
+            });
+
+            Mesh.createFromGLTF( xekeo, "./Model/xekeo/Untitled2.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.5, { origin: xekeo });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 115);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+            const xehoi = new Point({
+                x: 106.70693318220435,
+                y:10.768202788593655,
+                z: 7.1,
+            });
+
+            Mesh.createFromGLTF( xehoi, "./Model/xekeo/xe.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: xehoi });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 115);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+            const cotco1 = new Point({
+                x: 106.70677359076801,
+                y:10.76833308822116,
+                z: 20.57,
+            });
+
+            Mesh.createFromGLTF( cotco1, "./Model/xekeo/FlagVN.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.5, { origin: cotco1 });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 115);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error); 
+            const cotco2 = new Point({
+                x: 106.70683903665159,
+                y:10.768358384016318,
+                z: 20.57,
+            });
+
+            Mesh.createFromGLTF( cotco2, "./Model/xekeo/FlagVN.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.5, { origin: cotco2 });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 115);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);         
         });
 
 
