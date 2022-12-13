@@ -11913,11 +11913,192 @@
                 },
             });
 
+            //Thêm tường cho ảnh
+
+            const PhongThuNhat_BC1 = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_1/PhongThuNhat_BC1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.71,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const PhongThuNhat_BC3 = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_1/PhongThuNhat_BC3.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.71,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const PhongThuNhat_AD1 = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_1/PhongThuNhat_AD1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.71,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const PhongThuNhat_AD3 = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_1/PhongThuNhat_AD3.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.71,
+                                material: {
+                                    color: '#C2C59C',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const PhongThuHai_BC1 = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_2/PhongThuHai_BC1.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 4.71,
+                                material: {
+                                    color: '#CFC996',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const PhongThuHai_BC2 = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_2/PhongThuHai_BC2.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 6.71,
+                                material: {
+                                    color: '#FF0000',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
+            const PhongThuHai_BC3 = new GeoJSONLayer({
+                url: './Model/Phong_trung_bay_chu_de_2/PhongThuHai_BC3.geojson',
+                renderer: {
+                    type: 'simple',
+                    symbol: {
+                        type: 'polygon-3d',
+                        symbolLayers: [
+                            {
+                                type: 'extrude',
+                                size: 4.71,
+                                material: {
+                                    color: '#CFC996',
+                                },
+                                edges: {
+                                    type: 'solid', // autocasts as new SolidEdges3D()
+                                    color: 'transparent',
+                                },
+                            },
+                        ],
+
+                    },
+                },
+            });
+
             const map = new Map({
                 basemap: 'topo-vector',
                 ground: 'world-elevation',
                 layers: [
                     //
+
+                    PhongThuNhat_BC1,
+                    PhongThuNhat_BC3,
+
+                    PhongThuNhat_AD1,
+                    PhongThuNhat_AD3,
+
+                    PhongThuHai_BC1,
+                    PhongThuHai_BC2,
+                    PhongThuHai_BC3,
+                    
                     Buc,
                     BucTren,
 
@@ -12128,7 +12309,7 @@
                     edgeroof_topCD,
 
 
-                    wall,
+                    //wall,
                     wallAB1,
                     wallAB2,
                     wallAB3,
@@ -12137,7 +12318,7 @@
                     wallAB6,
                     wallAB7,
                     wallAB8,
-                    insideWall,
+                    //insideWall,
 
                     aboveWallFloor1AB,
                     aboveWallFloor2AB,
@@ -13403,11 +13584,11 @@
                 .catch(console.error);
             const xekeo = new Point({
                 x: 106.70694029000096,
-                y:10.768295012767528,
+                y: 10.768295012767528,
                 z: 7.1,
             });
 
-            Mesh.createFromGLTF( xekeo, "./Model/xekeo/Untitled2.glb")
+            Mesh.createFromGLTF(xekeo, "./Model/xekeo/Untitled2.glb")
                 .then(function (geometry) {
                     // increase it a factor of 3
                     geometry.scale(0.5, { origin: xekeo });
@@ -13422,7 +13603,7 @@
                             symbolLayers: [{
                                 type: "fill", // autocasts as new FillSymbol3DLayer()
                                 material: {
-                                    
+
                                 },
                                 size: 1000
                             }]
@@ -13434,11 +13615,11 @@
                 .catch(console.error);
             const xehoi = new Point({
                 x: 106.70693318220435,
-                y:10.768202788593655,
+                y: 10.768202788593655,
                 z: 7.1,
             });
 
-            Mesh.createFromGLTF( xehoi, "./Model/xekeo/xe.glb")
+            Mesh.createFromGLTF(xehoi, "./Model/xekeo/xe.glb")
                 .then(function (geometry) {
                     // increase it a factor of 3
                     geometry.scale(1, { origin: xehoi });
@@ -13453,7 +13634,7 @@
                             symbolLayers: [{
                                 type: "fill", // autocasts as new FillSymbol3DLayer()
                                 material: {
-                                    
+
                                 },
                                 size: 1000
                             }]
@@ -13465,11 +13646,11 @@
                 .catch(console.error);
             const cotco1 = new Point({
                 x: 106.70677359076801,
-                y:10.76833308822116,
+                y: 10.76833308822116,
                 z: 20.57,
             });
 
-            Mesh.createFromGLTF( cotco1, "./Model/xekeo/FlagVN.glb")
+            Mesh.createFromGLTF(cotco1, "./Model/xekeo/FlagVN.glb")
                 .then(function (geometry) {
                     // increase it a factor of 3
                     geometry.scale(0.5, { origin: cotco1 });
@@ -13484,7 +13665,7 @@
                             symbolLayers: [{
                                 type: "fill", // autocasts as new FillSymbol3DLayer()
                                 material: {
-                                    
+
                                 },
                                 size: 1000
                             }]
@@ -13493,14 +13674,14 @@
 
                     view.graphics.add(graphic);
                 })
-                .catch(console.error); 
+                .catch(console.error);
             const cotco2 = new Point({
                 x: 106.70683903665159,
-                y:10.768358384016318,
+                y: 10.768358384016318,
                 z: 20.57,
             });
 
-            Mesh.createFromGLTF( cotco2, "./Model/xekeo/FlagVN.glb")
+            Mesh.createFromGLTF(cotco2, "./Model/xekeo/FlagVN.glb")
                 .then(function (geometry) {
                     // increase it a factor of 3
                     geometry.scale(0.5, { origin: cotco2 });
@@ -13515,7 +13696,7 @@
                             symbolLayers: [{
                                 type: "fill", // autocasts as new FillSymbol3DLayer()
                                 material: {
-                                    
+
                                 },
                                 size: 1000
                             }]
@@ -13524,7 +13705,859 @@
 
                     view.graphics.add(graphic);
                 })
-                .catch(console.error);         
+                .catch(console.error);
+
+
+            //ẢNH TRONG NHÀ
+
+            const PhongThuNhatBC = new Point({
+                x: 106.70677567645735,
+                y: 10.768256782605917,
+                z: 15.5,
+            });
+
+            Mesh.createFromGLTF(PhongThuNhatBC, "./Model/Phong_trung_bay_chu_de_1/PhongThuNhatBC.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuNhatBC });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 204);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+            const PhongThuNhat_AB = new Point({
+                x: 106.70672806471654,
+                y: 10.768273392156269,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuNhat_AB, "./Model/Phong_trung_bay_chu_de_1/PhongThuNhatAB.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.82, { origin: PhongThuNhat_AB });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 294);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuNhat_CD = new Point({
+                x: 106.70675177914909,
+                y: 10.768220786614185,
+                z: 15,
+            });
+
+            Mesh.createFromGLTF(PhongThuNhat_CD, "./Model/Phong_trung_bay_chu_de_1/PhongThuNhatCD.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuNhat_CD });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 114);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuNhat_AD = new Point({
+                x: 106.70672316109874,
+                y: 10.76823407778048,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuNhat_AD, "./Model/Phong_trung_bay_chu_de_1/PhongThuNhatDA.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuNhat_AD });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+
+            const PhongThuHai_AB = new Point({
+                x: 106.7067901481021,
+                y: 10.768287587616687,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuHai_AB, "./Model/Phong_trung_bay_chu_de_2/PhongThuHai_AB.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuHai_AB });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 294);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuHai_BC = new Point({
+                x: 106.70683425128041,
+                y: 10.768282107218905,
+                z: 16,
+            });
+
+
+            Mesh.createFromGLTF(PhongThuHai_BC, "./Model/Phong_trung_bay_chu_de_2/PhongThuHai_BC.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuHai_BC });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 204);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuHai_CD = new Point({
+                x: 106.70681035295145,
+                y: 10.768252805762463,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuHai_CD, "./Model/Phong_trung_bay_chu_de_2/PhongThuHai_CD.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuHai_CD });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 114);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuHai_DA = new Point({
+                x: 106.70677857995072,
+                y: 10.768258037920784,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuHai_DA, "./Model/Phong_trung_bay_chu_de_2/PhongThuHai_DA.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuHai_DA });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+            const PhongThuBa_AB = new Point({
+                x: 106.70686752149157,
+                y: 10.768301326735294,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuBa_AB, "./Model/Phong_trung_bay_chu_de_3/PhongThuBa_AB.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuBa_AB });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 294);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuBa_BC = new Point({
+                x: 106.70691911296996,
+                y: 10.768311358000712,
+                z: 16,
+            });
+
+
+            Mesh.createFromGLTF(PhongThuBa_BC, "./Model/Phong_trung_bay_chu_de_3/PhongThuBa_BC.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuBa_BC });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 204);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuBa_CD = new Point({
+                x: 106.70688604400692,
+                y: 10.768260238382895,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuBa_CD, "./Model/Phong_trung_bay_chu_de_3/PhongThuBa_CD.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuBa_CD });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 114);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuBa_DA = new Point({
+                x: 106.70683673380753,
+                y: 10.768284296359962,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuBa_DA, "./Model/Phong_trung_bay_chu_de_3/PhongThuBa_DA.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuBa_DA });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+            const PhongThuTu_AB = new Point({
+                x: 106.70691140479983,
+                y: 10.768219874876213,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuTu_AB, "./Model/Phong_trung_bay_chu_de_4/PhongThuTu_AB.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuTu_AB });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 294);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+            const PhongThuTu_BC = new Point({
+                x: 106.70695351994546,
+                y: 10.76823503327338,
+                z: 16,
+            });
+
+
+            Mesh.createFromGLTF(PhongThuTu_BC, "./Model/Phong_trung_bay_chu_de_4/PhongThuTu_BC.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuTu_BC });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 204);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const PhongThuTu_CD = new Point({
+                x: 106.70691867271952,
+                y: 10.768162762345762,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuTu_CD, "./Model/Phong_trung_bay_chu_de_4/PhongThuTu_CD.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuTu_CD });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 114);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+
+            const PhongThuTu_DA = new Point({
+                x: 106.70687146469764,
+                y: 10.768199556983634,
+                z: 16,
+            });
+
+            Mesh.createFromGLTF(PhongThuTu_DA, "./Model/Phong_trung_bay_chu_de_4/PhongThuTu_DA.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: PhongThuTu_DA });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const Bac_Ho_voi_mien_Nam_AB = new Point({
+                x: 106.70688913109281,
+                y: 10.768253390324162,
+                z: 9,
+            });
+
+            Mesh.createFromGLTF(Bac_Ho_voi_mien_Nam_AB, "./Model/Bac_Ho_voi_mien_Nam/Bac_Ho_voi_mien_Nam_AB.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: Bac_Ho_voi_mien_Nam_AB });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 294);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const Bac_Ho_voi_mien_Nam_BC = new Point({
+                x: 106.70694818872687,
+                y: 10.768240167203173,
+                z: 9,
+            });
+
+
+            Mesh.createFromGLTF(Bac_Ho_voi_mien_Nam_BC, "./Model/Bac_Ho_voi_mien_Nam/Bac_Ho_voi_mien_Nam_BC.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: Bac_Ho_voi_mien_Nam_BC });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 204);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const Bac_Ho_voi_mien_Nam_CD = new Point({
+                x: 106.70692330079663,
+                y: 10.76816922659589,
+                z: 9,
+            });
+
+            Mesh.createFromGLTF(Bac_Ho_voi_mien_Nam_CD, "./Model/Bac_Ho_voi_mien_Nam/Bac_Ho_voi_mien_Nam_CD.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: Bac_Ho_voi_mien_Nam_CD });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 114);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+            const VN_TN_Right = new Point({
+                x: 106.7068339356833,
+                y: 10.768281970771637,
+                z: 9,
+            });
+
+
+            Mesh.createFromGLTF(VN_TN_Right, "./Model/Viet_Nam_nhung_Tuyen_ngon_doc_lap/VN_TN_Right.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: VN_TN_Right });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 204);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const VN_TN_Left = new Point({
+                x: 106.70680616313788,
+                y: 10.768269963412031,
+                z: 9,
+            });
+
+
+            Mesh.createFromGLTF(VN_TN_Left, "./Model/Viet_Nam_nhung_Tuyen_ngon_doc_lap/VN_TN_Left.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: VN_TN_Left });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const HanhTrinhBC = new Point({
+                x: 106.7068042700656,
+                y: 10.768265797460776,
+                z: 9,
+            });
+
+
+            Mesh.createFromGLTF(HanhTrinhBC, "./Model/Cuoc_hanh_trinh_thoi_dai/HanhTrinhBC.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: HanhTrinhBC });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 204);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const HanhTrinhBC_Inside_1 = new Point({
+                x: 106.70677912919723,
+                y: 10.768243769602922,
+                z: 9,
+            });
+
+            Mesh.createFromGLTF(HanhTrinhBC_Inside_1, "./Model/Cuoc_hanh_trinh_thoi_dai/HanhTrinhBC_Inside_1.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: HanhTrinhBC_Inside_1 });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const HanhTrinhBC_Inside_2 = new Point({
+                x: 106.70677776246035,
+                y: 10.768237599552018,
+                z: 9,
+            });
+
+            Mesh.createFromGLTF(HanhTrinhBC_Inside_2, "./Model/Cuoc_hanh_trinh_thoi_dai/HanhTrinhBC_Inside_2.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: HanhTrinhBC_Inside_2 });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+
+            const HanhTrinhBC_Inside_3 = new Point({
+                x: 106.70676163307564,
+                y: 10.768223187207981,
+                z: 9,
+            });
+
+            Mesh.createFromGLTF(HanhTrinhBC_Inside_3, "./Model/Cuoc_hanh_trinh_thoi_dai/HanhTrinhBC_Inside_3.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(0.8, { origin: HanhTrinhBC_Inside_3 });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
+
+            const HanhTrinhDA = new Point({
+                x: 106.70672246204003,
+                y: 10.768218897819237,
+                z: 9,
+            });
+
+            Mesh.createFromGLTF(HanhTrinhDA, "./Model/Cuoc_hanh_trinh_thoi_dai/HanhTrinhDA.glb")
+                .then(function (geometry) {
+                    // increase it a factor of 3
+                    geometry.scale(1, { origin: HanhTrinhDA });
+                    // rotate it by 90 degrees around the z axis
+
+                    geometry.rotate(0, 0, 24);
+                    // add it to a graphic
+                    const graphic = new Graphic({
+                        geometry,
+                        symbol: {
+                            type: "mesh-3d", // autocasts as new MeshSymbol3D()
+                            symbolLayers: [{
+                                type: "fill", // autocasts as new FillSymbol3DLayer()
+                                material: {
+                                    color: "#blue"
+                                },
+                                size: 1000
+                            }]
+                        }
+                    });
+
+                    view.graphics.add(graphic);
+                })
+                .catch(console.error);
         });
 
 
